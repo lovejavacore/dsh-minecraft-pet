@@ -7,6 +7,19 @@
 
 > A Minecraft-themed desktop pet in the bottom-right corner of the DSH Web GUI — Steve, Creeper and Ultraman react to the agent's working status with animations and per-pet completion sounds.
 
+## 目录 Contents
+
+- [特性 Features](#特性-features)
+- [目录结构](#目录结构)
+- [截图 / 演示 Screenshots](#截图--演示-screenshots)
+- [如何安装 Install](#如何安装-install)
+- [技术实现 Implementation](#技术实现-implementation)
+- [常见问题 FAQ](#常见问题-faq)
+- [贡献 Contributing](#贡献-contributing)
+- [致谢 Acknowledgments](#致谢-acknowledgments)
+- [免责声明 Disclaimer](#免责声明-disclaimer)
+- [License](#license)
+
 ## 特性 Features
 
 ### 🐾 三只宠物
@@ -75,6 +88,11 @@ dsh-minecraft-pet/
 
 ## 如何安装 Install
 
+### 环境要求
+
+- DeepSeek Harness (DSH) Web GUI（支持 Cordis 动态插件）
+- 可选：Node.js ≥ 14（用于运行 `npm run audio` 重新生成音效交付物）
+
 本插件是一个 **Cordis 动态插件（Dynamic Cordis Plugin）**，由「Host 半」和「Client 半」组成。
 
 1. 在 DSH Web GUI 中，将 `src/host.js` 里 `createHostHalf()` 返回的 `{ ... }` 作为 Host 代码（`code.host`），
@@ -93,6 +111,37 @@ dsh-minecraft-pet/
 - **动画**：`styles.insert` 注入 CSS keyframes，对 SVG `<g>` 局部元素（镐子、手臂、腿）做 transform 动画。
 - **音效**：客户端没有 `AudioContext`/`fetch`/文件访问，因此用纯 JS 程序化合成 8-bit PCM WAV 数据 URI，
   渲染 `<audio>` 元素播放；`audio/generate.js` 用同一套合成算法生成可试听的 `.wav` 交付物。
+
+## 常见问题 FAQ
+
+- **音效不响？** 浏览器自动播放策略要求页面至少有过一次用户交互。先在菜单里点「🔊 试听音效」一次即可「预热」。
+- **如何切换奥特曼皮肤？** 右键打开菜单，选中奥特曼后会出现「初代 / 赛文 / 泰罗 / 迪迦 / 泽塔」按钮。
+- **宠物位置怎么复位？** 菜单里点「↺ 复位位置」，或直接拖拽到任意位置后用四角定位按钮重新固定。
+- **想加新宠物 / 新皮肤？** 参考 `src/client.js` 里的 `PETS`、`ULTRA_SKINS` 与对应的 Art 渲染函数即可扩展，欢迎 PR。
+
+## 贡献 Contributing
+
+欢迎提交 Issue 和 Pull Request。
+
+1. Fork 本仓库并克隆到本地。
+2. 修改 `src/host.js` / `src/client.js`（纯 JavaScript，无 TypeScript / JSX / 打包）。
+3. 保持代码风格一致，提交信息清晰。
+4. 推送到你的 fork，发起 Pull Request 到 `main` 分支。
+
+## 致谢 Acknowledgments
+
+- [Minecraft](https://www.minecraft.net/)（© Mojang / Microsoft）—— 史蒂夫、苦力怕形象来源
+- 奥特曼系列（© 圆谷制作株式会社 Tsuburaya Productions）—— 奥特曼形象与必杀技来源
+- [DeepSeek Harness](https://github.com/deepseek-ai) —— 运行平台
+
+## 免责声明 Disclaimer
+
+本项目仅用于**学习与技术演示**，为粉丝致敬性质，与 Mojang / Microsoft 及圆谷制作株式会社**无关**。
+
+- 「Minecraft」「Steve」「Creeper」及相关形象版权归 **Mojang / Microsoft** 所有。
+- 「奥特曼 / Ultraman」及相关角色、必杀技名称版权归 **圆谷制作株式会社** 所有。
+
+本项目不包含任何官方素材、音频或图像资源；所有宠物造型均为代码绘制的原创近似风格，音效为程序化合成。请勿将本项目用于任何商业用途。
 
 ## License
 
