@@ -79,12 +79,9 @@ dsh-minecraft-pet/
 
 ## 截图 / 演示 Screenshots
 
-> 推荐用 [ScreenToGif](https://www.screentogif.com/) 或 OBS 录制宠物在「待机 / 工作 / 完成」三态下的动图，
-> 放入 `assets/` 目录，并在下方以 Markdown 图片引用。
+![史蒂夫 Steve](assets/Steve.png)
 
-<!-- 示例：
-![demo](assets/demo.gif)
--->
+> 更多宠物（苦力怕 / 奥特曼）与三态动作（待机 / 工作 / 完成）的动图可继续补充到 `assets/` 目录。
 
 ## 如何安装 Install
 
