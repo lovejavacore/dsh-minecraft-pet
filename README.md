@@ -1,5 +1,8 @@
 # DSH Minecraft Pet · DSH 我的世界桌面宠物
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/lovejavacore/dsh-minecraft-pet?style=social)](https://github.com/lovejavacore/dsh-minecraft-pet)
+
 一个运行在 [DeepSeek Harness (DSH)](https://github.com/deepseek-ai) Web GUI 右下角的 **Minecraft 主题桌面宠物**——史蒂夫（Steve）、苦力怕（Creeper）与奥特曼（Ultraman），根据当前 Agent 的工作状态实时切换动作，并在任务完成时播放专属音效。
 
 > A Minecraft-themed desktop pet in the bottom-right corner of the DSH Web GUI — Steve, Creeper and Ultraman react to the agent's working status with animations and per-pet completion sounds.
@@ -46,7 +49,7 @@
 ## 目录结构
 
 ```
-dsh-desktop-pet/
+dsh-minecraft-pet/
 ├── README.md
 ├── LICENSE
 ├── package.json
@@ -60,6 +63,15 @@ dsh-desktop-pet/
     ├── ultraman.wav
     └── creeper.wav
 ```
+
+## 截图 / 演示 Screenshots
+
+> 推荐用 [ScreenToGif](https://www.screentogif.com/) 或 OBS 录制宠物在「待机 / 工作 / 完成」三态下的动图，
+> 放入 `assets/` 目录，并在下方以 Markdown 图片引用。
+
+<!-- 示例：
+![demo](assets/demo.gif)
+-->
 
 ## 如何安装 Install
 
