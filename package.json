@@ -1,0 +1,23 @@
+{
+  "name": "dsh-minecraft-pet",
+  "version": "1.0.0",
+  "description": "A Minecraft-themed desktop pet for the DeepSeek Harness (DSH) Web GUI — Steve, Creeper and Ultraman react to the agent's working status with animations and per-pet completion sounds.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "harness",
+    "desktop-pet",
+    "cordis",
+    "plugin",
+    "minecraft",
+    "ultraman",
+    "creeper"
+  ],
+  "scripts": {
+    "audio": "node audio/generate.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
