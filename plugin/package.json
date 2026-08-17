@@ -1,0 +1,22 @@
+{
+  "name": "dsh-desktop-pet",
+  "version": "1.0.0",
+  "description": "DSH 桌面宠物：Steve / Creeper / 奥特曼 随 Agent 工作状态动画（host 状态跟踪 + web overlay UI）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
